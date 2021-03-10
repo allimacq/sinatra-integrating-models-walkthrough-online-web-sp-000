@@ -11,7 +11,8 @@ class App < Sinatra::Base
     @word_count = @analyzed_text.count_of_words
     @vowel_count = @analyzed_text.count_of_vowels
     @consonant_count = @analyzed_text.count_of_consonants
- 
+    @most_used = @analyzed_text.most_used_letter
+    
     erb :results
   end
 end
